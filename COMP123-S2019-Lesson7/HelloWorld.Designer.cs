@@ -30,6 +30,7 @@
         {
             this.HelloWorldLabel = new System.Windows.Forms.Label();
             this.ClickMeButton = new System.Windows.Forms.Button();
+            this.RandomNumberLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // HelloWorldLabel
@@ -55,12 +56,25 @@
             this.ClickMeButton.UseVisualStyleBackColor = true;
             this.ClickMeButton.Click += new System.EventHandler(this.ClickMeButton_Click);
             // 
+            // RandomNumberLabel
+            // 
+            this.RandomNumberLabel.BackColor = System.Drawing.Color.White;
+            this.RandomNumberLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RandomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RandomNumberLabel.Location = new System.Drawing.Point(569, 280);
+            this.RandomNumberLabel.Name = "RandomNumberLabel";
+            this.RandomNumberLabel.Size = new System.Drawing.Size(83, 51);
+            this.RandomNumberLabel.TabIndex = 2;
+            this.RandomNumberLabel.Text = "999";
+            this.RandomNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // HelloWorld
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.RandomNumberLabel);
             this.Controls.Add(this.ClickMeButton);
             this.Controls.Add(this.HelloWorldLabel);
             this.Name = "HelloWorld";
@@ -74,6 +88,7 @@
 
         private System.Windows.Forms.Label HelloWorldLabel;
         private System.Windows.Forms.Button ClickMeButton;
+        private System.Windows.Forms.Label RandomNumberLabel;
     }
 }
 

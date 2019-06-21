@@ -12,6 +12,9 @@ namespace COMP123_S2019_Lesson7
 {
     public partial class HelloWorld : Form
     {
+        private int m_randomNumber;
+
+
         /// <summary>
         /// HelloWorld Form Constructor
         /// </summary>
@@ -26,9 +29,12 @@ namespace COMP123_S2019_Lesson7
         /// </summary>
         public void Start()
         {
+            // HelloWorldLabel
             HelloWorldLabel.Text = "Hello, Tom!";
             HelloWorldLabel.BackColor = Color.Black;
             HelloWorldLabel.ForeColor = Color.White;
+
+            AddRandomNumberToRandomNumberLabel();
         }
 
         /// <summary>
@@ -39,6 +45,17 @@ namespace COMP123_S2019_Lesson7
         private void ClickMeButton_Click(object sender, EventArgs e)
         {
             HelloWorldLabel.Text = (HelloWorldLabel.Text == "Clicked!") ? "Unclicked!" : "Clicked!";
+            AddRandomNumberToRandomNumberLabel();
+        }
+
+        /// <summary>
+        /// This method adds a random number from 1 to 49 to the RandomNumberLabel text property
+        /// </summary>
+        private void AddRandomNumberToRandomNumberLabel()
+        {
+            // RandomNumberLabel
+            this.m_randomNumber = new Random().Next(0, 49) + 1;
+            RandomNumberLabel.Text = m_randomNumber.ToString();
         }
     }
 }
